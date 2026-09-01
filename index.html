@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b1e3f">
+  <meta name="description" content="Siddi Youth Club - Ganesh Utsav 2026, Ram Nagar, Armoor">
+  <title>Siddi Youth Club | Ganesh Utsav 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true">🌸 ✦ 🌺 ✦ 🌸 ✦ 🌺</div>
+
+  <main>
+    <section id="blessing" class="screen blessing-screen">
+      <div class="card">
+        <img src="images/siddi-youth-club-logo.jpg"
+             alt="Siddi Youth Club"
+             class="club-logo">
+
+        <div class="diya-row">🪔 ✨ 🪔</div>
+        <div class="ganesha" aria-hidden="true">🕉️</div>
+
+        <p class="sanskrit">॥ श्री गणेशाय नमः ॥</p>
+        <h1>Ganesh Utsav 2026</h1>
+        <p class="location">Ram Nagar, Armoor</p>
+
+        <div class="divider">❖</div>
+
+        <p class="blessing">
+          May Lord Ganesha bless you and your family with
+          happiness, prosperity, good health and success.
+        </p>
+
+        <p class="mantra">गणपति बप्पा मोरया 🙏</p>
+
+        <button class="primary" onclick="showDonation()">
+          Receive Blessings & Continue
+        </button>
+      </div>
+    </section>
+
+    <section id="donation" class="screen donation-screen hidden">
+      <div class="card">
+        <div class="diya-row">🌺 🪔 🌺</div>
+        <h1>Siddi Youth Club</h1>
+        <p class="event">Ganesh Utsav 2026 · Ram Nagar, Armoor</p>
+
+        <div class="divider">❖</div>
+
+        <h2>Support the Celebration</h2>
+        <p>
+          Your contribution helps Siddi Youth Club conduct the Ganesh Utsav
+          celebration with devotion and joy.
+        </p>
+
+        <p class="choose">Choose a donation amount</p>
+
+        <div class="amount-grid">
+          <button onclick="donate(101)">₹101</button>
+          <button onclick="donate(501)">₹501</button>
+          <button onclick="donate(1001)">₹1,001</button>
+          <button onclick="donate(2001)">₹2,001</button>
+        </div>
+
+        <button class="primary" onclick="donateCustom()">
+          Enter Another Amount
+        </button>
+
+        <p class="upi-note">
+          UPI: <strong>9700375788@ptaxis</strong>
+        </p>
+
+        <button class="back" onclick="showBlessing()">← Back to Blessings</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

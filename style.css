@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{color:#35151d;background:#6f1734;overflow-x:hidden}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;background:
+radial-gradient(circle at 50% 10%,rgba(255,245,185,.95) 0,rgba(244,169,66,.55) 25%,transparent 50%),
+linear-gradient(145deg,#f5c65d 0%,#d97835 45%,#721a3d 100%)}
+.card{width:min(100%,450px);padding:28px 24px 30px;text-align:center;background:rgba(255,250,238,.96);
+border:2px solid rgba(255,215,120,.75);border-radius:30px;box-shadow:0 22px 70px rgba(0,0,0,.38);
+animation:appear .65s ease}
+.club-logo{width:145px;height:105px;object-fit:cover;border-radius:12px;display:block;margin:0 auto 8px;
+box-shadow:0 5px 18px rgba(0,0,0,.18)}
+.diya-row{font-size:24px;letter-spacing:5px;margin:6px 0}
+.ganesha{font-size:64px;line-height:1;margin:8px 0 10px}
+.sanskrit{font-size:24px;font-weight:bold;color:#9b203d;margin:4px 0 8px}
+h1{font-size:30px;color:#7d1839;margin:7px 0 4px}
+h2{font-size:21px;color:#632133;margin:5px 0 10px}
+.location,.event{font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#70414b;margin:4px 0 15px}
+.divider{color:#b77a22;font-size:22px;margin:12px 0}
+.blessing{font-size:17px;line-height:1.65;margin:8px 0 16px}
+.mantra{font-size:18px;font-weight:bold;color:#941e3d;margin:0 0 20px}
+.choose{font-size:16px;font-weight:bold;margin:17px 0 10px}
+.amount-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:14px}
+button{width:100%;border:0;border-radius:999px;padding:15px 12px;font-family:inherit;font-size:17px;font-weight:bold;cursor:pointer}
+button:active{transform:scale(.98)}
+.amount-grid button{background:#f4dfad;color:#761b38;border:1px solid #d3ad62}
+.primary{color:#fff;background:linear-gradient(90deg,#7b1d43,#b42d57);box-shadow:0 8px 22px rgba(123,29,67,.25)}
+.upi-note{font-family:system-ui,sans-serif;font-size:13px;color:#6e555a;margin:16px 0 12px}
+.back{margin-top:2px;background:transparent;color:#7b1d43;border:1px solid #caa8ae}
+.hidden{display:none}
+.petals{position:fixed;z-index:5;top:10px;left:0;right:0;text-align:center;pointer-events:none;font-size:16px;opacity:.65;letter-spacing:8px}
+@keyframes appear{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:380px){.card{padding:24px 18px}.club-logo{width:125px;height:92px}.sanskrit{font-size:21px}h1{font-size:26px}.amount-grid{grid-template-columns:1fr}.blessing{font-size:16px}}
