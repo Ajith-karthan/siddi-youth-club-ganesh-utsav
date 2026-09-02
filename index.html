@@ -9,69 +9,76 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="petals" aria-hidden="true">🌸 ✦ 🌺 ✦ 🌸 ✦ 🌺</div>
-
   <main>
-    <section id="blessing" class="screen blessing-screen">
+    <section id="blessing" class="screen">
       <div class="card">
-        <img src="siddi-youth-club-logo.jpg"
-             alt="Siddi Youth Club"
-             class="club-logo">
-
+        <div class="club-title">Siddi Youth Club</div>
+        <div class="location">Ram Nagar, Armoor</div>
         <div class="diya-row">🪔 ✨ 🪔</div>
-        <div class="ganesha" aria-hidden="true">🕉️</div>
-
+        <div class="ganesha">🕉️</div>
         <p class="sanskrit">॥ श्री गणेशाय नमः ॥</p>
         <h1>Ganesh Utsav 2026</h1>
-        <p class="location">Ram Nagar, Armoor</p>
-
         <div class="divider">❖</div>
-
         <p class="blessing">
-          May Lord Ganesha bless you and your family with
-          happiness, prosperity, good health and success.
+          May Lord Ganesha bless you and your family with happiness,
+          prosperity, good health and success.
         </p>
-
         <p class="mantra">गणपति बप्पा मोरया 🙏</p>
-
-        <button class="primary" onclick="showDonation()">
-          Receive Blessings & Continue
-        </button>
+        <button class="primary" onclick="showDonation()">Receive Blessings & Continue</button>
       </div>
     </section>
 
-    <section id="donation" class="screen donation-screen hidden">
+    <section id="donation" class="screen hidden">
       <div class="card">
         <div class="diya-row">🌺 🪔 🌺</div>
         <h1>Siddi Youth Club</h1>
         <p class="event">Ganesh Utsav 2026 · Ram Nagar, Armoor</p>
-
         <div class="divider">❖</div>
-
         <h2>Support the Celebration</h2>
-        <p>
-          Your contribution helps Siddi Youth Club conduct the Ganesh Utsav
-          celebration with devotion and joy.
-        </p>
+        <p>Your contribution helps Siddi Youth Club celebrate Ganesh Utsav with devotion and joy.</p>
 
-        <p class="choose">Choose a donation amount — tap an amount to pay</p>
-
+        <p class="choose">Choose an amount to pay</p>
         <div class="amount-grid">
-          <button onclick="donate(101)">₹101</button>
-          <button onclick="donate(501)">₹501</button>
-          <button onclick="donate(1001)">₹1,001</button>
-          <button onclick="donate(2001)">₹2,001</button>
+          <button onclick="startPayment(101)">₹101</button>
+          <button onclick="startPayment(501)">₹501</button>
+          <button onclick="startPayment(1001)">₹1,001</button>
+          <button onclick="startPayment(2001)">₹2,001</button>
         </div>
 
-        <button class="primary" onclick="donateCustom()">
-          Enter Another Amount
-        </button>
+        <button class="primary" onclick="customPayment()">Enter Another Amount</button>
 
-        <p class="upi-note">
-          UPI: <strong>9700375788@ptaxis</strong>
-        </p>
+        <div class="qr-box">
+          <p class="qr-title">Or scan to pay with any UPI app</p>
+          <img src="images/phonepe-qr.jpg" class="qr" alt="Siddi Youth Club PhonePe UPI QR code">
+          <p class="upi">UPI ID: <strong>9700375788@ybl</strong></p>
+        </div>
 
+        <p class="note">After completing payment, return here and tap the confirmation button below.</p>
+        <button class="confirm" onclick="showReceipt()">✅ I Have Completed the Payment</button>
         <button class="back" onclick="showBlessing()">← Back to Blessings</button>
+      </div>
+    </section>
+
+    <section id="receipt" class="screen hidden">
+      <div class="card">
+        <div id="receiptCard" class="receipt-card">
+          <div class="receipt-symbol">🙏</div>
+          <div class="receipt-club">Siddi Youth Club</div>
+          <div class="receipt-event">Ganesh Utsav 2026</div>
+          <div class="receipt-location">Ram Nagar, Armoor</div>
+          <div class="divider">❖</div>
+          <h1>Contribution Received</h1>
+          <p class="receipt-blessing">
+            May Lord Ganesha bless you and your family with happiness,
+            prosperity, good health and success.
+          </p>
+          <p class="mantra">गणपति बप्पा मोरया 🙏</p>
+          <div class="receipt-line">Thank you for supporting our celebration.</div>
+          <div class="receipt-date" id="receiptDate"></div>
+        </div>
+
+        <button class="primary" onclick="downloadReceipt()">📥 Download Contribution Receipt</button>
+        <button class="back" onclick="showDonation()">← Back</button>
       </div>
     </section>
   </main>
