@@ -1,17 +1,19 @@
 # Siddi Youth Club - Ganesh Utsav 2026
 
-A mobile-friendly static donation website for Siddi Youth Club, Ram Nagar, Armoor.
+## Features
+- Blessing screen
+- Donation amounts
+- PhonePe/UPI payment using `9700375788@ybl`
+- PhonePe QR image from the supplied screenshot
+- "I Have Completed the Payment" button
+- Downloadable PNG contribution receipt with Ganesh blessings
 
-## Donation flow
-Blessings -> Donation amount -> UPI payment
+## Important payment note
+The static website cannot independently verify a UPI payment. The confirmation button is a user declaration that they completed payment. For automatic verified payment status, use a payment gateway/merchant integration with a backend.
 
-## UPI
-The site is configured with:
-9700375788@ptaxis
-
-## Important
-Test the UPI link on an Android phone with a UPI app installed before publishing.
-This static site does not verify whether a payment was completed. Verified payments and automatic receipts require a payment gateway/backend.
-
-## Publish
-Upload all files to a static host such as GitHub Pages, Netlify, or Vercel.
+## GitHub Pages
+Keep this exact structure:
+- index.html
+- style.css
+- script.js
+- images/phonepe-qr.jpg
