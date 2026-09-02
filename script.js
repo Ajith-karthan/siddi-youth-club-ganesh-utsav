@@ -13,17 +13,23 @@ function showBlessing() {
   window.scrollTo(0, 0);
 }
 
+// Tap an amount to open the phone's installed UPI app.
 function donate(amount) {
-  if (!Number.isFinite(amount) || amount <= 0) return;
+  amount = Number(amount);
 
-  const upiUrl =
+  if (!Number.isFinite(amount) || amount <= 0) {
+    alert("Please select a valid donation amount.");
+    return;
+  }
+
+  const upiLink =
     "upi://pay" +
     "?pa=" + encodeURIComponent(UPI_ID) +
     "&pn=" + encodeURIComponent(PAYEE_NAME) +
     "&am=" + encodeURIComponent(amount.toFixed(2)) +
     "&cu=INR";
 
-  window.location.href = upiUrl;
+  window.location.href = upiLink;
 }
 
 function donateCustom() {
